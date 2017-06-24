@@ -3,5 +3,14 @@
 
 ## What contain?
 
-* Opencv-mouse
-    * use in `scale/`
+* mouse-event
+    * opencv-mouse
+    * matplotlib-mouse
+
+
+## Mouse-Foloer
+
+### mouse.py
+
+* **def** `draw_rect` - by `opencv`
+* **class** `Annotate` - by `matplotlib`

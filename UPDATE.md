@@ -22,4 +22,5 @@
 
 ### 6-24
 
-* in `mouse` - **created** this folder, and create `mouse.py` file
+* in `mouse.py` - **created** this folder, and create `mouse.py` file
+* in `mouse.py` - **add** class `Annotate` and def `draw_rect`

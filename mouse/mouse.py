@@ -30,11 +30,11 @@ def draw_rect(event, x, y, flags, params):
         ex, ey = x, y
         params[1] = sx, sy, ex, ey
 
-# matplotlib
+# matplotlib - mouse
 class Annotate(object):
-    def __init__(self):
+    def __init__(self, path):
         self.ax = plt.gca()
-        self.img = cv2.imread('./img/0.png')
+        self.img = cv2.imread(path)
         self.rect = Rectangle((0,0), 1, 1, edgecolor='red')
         self.x0 = None
         self.y0 = None
@@ -50,40 +50,39 @@ class Annotate(object):
         self.ax.figure.canvas.mpl_connect('motion_notify_event', self.on_motion)
 
     def on_press(self, event):
-        print 'press'
-        self.x0 = event.xdata
-        self.y0 = event.ydata
-        if self.x0 < 1:
-            self.x0 = 1
+        self.x0 = event.xdata if event.xdata else 0
+        self.y0 = event.ydata if event.ydata else 0
         self.press = True
         print self.range
 
     def on_release(self, event):
-        print 'release'
-        self.x1 = event.xdata
-        self.y1 = event.ydata
+        self.x1 = event.xdata if event.xdata else 0
+        self.y1 = event.ydata if event.ydata else 0
         self.press = False
         self.rect.set_width(self.x1 - self.x0)
         self.rect.set_height(self.y1 - self.y0)
         self.rect.set_xy((self.x0, self.y0))
         self.rect_coor.append((self.x0, self.y0, self.x1, self.y1))
+        print self.rect_coor
         self.ax.figure.canvas.draw()
     
     def on_motion(self, event):
-        print 'motion'
         if self.press == True:
             x0, y0, x1, y1 = self.x0, self.y0, self.x1, self.y1
-            dx = event.xdata - x0
-            dy = event.ydata - y0
+            x_now = event.xdata if event.xdata else 0
+            y_now = event.ydata if event.ydata else 0
+            dx = x_now - x0
+            dy = y_now - y0
             self.rect.set_width(dx)
             self.rect.set_height(dy)
             self.rect.set_xy((self.x0, self.y0))
             self.ax.figure.canvas.draw()
 
-    def range_detect(self, coor):
-        if not coor[0]:
-            print 'ok'
-            coor[0] = 0
-            print coor[0]
-        if not coor[1]:
-            coor[1] = 0
+        def draw_rect(self, coor_arrs):
+            '''draw rect, and rect's arr from coor_arrs
+            '''
+            for coor in coor_arrs:
+                self.rect.set_width(coor[2] - coor[0])
+                self.rect.set_height(coor[3] - coor[1])
+                self.rect.set_xy((coor[0], coor[1]))
+                self.ax.figure.canvas.draw()
