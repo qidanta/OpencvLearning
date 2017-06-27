@@ -5,7 +5,7 @@ import cv2
 class Annotate(object):
     def __init__(self):
         self.ax = plt.gca()
-        self.img = cv2.imread('./img/0.png')
+        self.img = cv2.imread('./img/ip7_3_angle_doublea4.jpg')
         self.rect = Rectangle((0,0), 1, 1, edgecolor='red')
         self.x0 = None
         self.y0 = None
@@ -34,7 +34,7 @@ class Annotate(object):
         # self.rect.set_xy((self.x0, self.y0))
         self.rect_coor.append((self.x0, self.y0, self.x1, self.y1))
         self.draw_rect(self.rect_coor)
-        print self.rect_coor
+        print(self.rect_coor)
     
     def on_motion(self, event):
         if self.press == True:
