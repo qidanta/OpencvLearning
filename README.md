@@ -16,3 +16,10 @@
 * **class** `Annotate` - by `matplotlib`
 
 ## Video-Folder
+
+* def `local_camera` - by `cv2`
+* def `web_camera`- by `imutils`
+
+## fs
+
+## util

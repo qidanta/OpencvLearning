@@ -9,6 +9,7 @@
         - [6-24](#6-24)
     - [Video](#video)
         - [6-27](#6-27)
+        - [6-28](#6-28)
 
 <!-- /TOC -->
 
@@ -32,3 +33,9 @@
 ### 6-27
 
 * in `Video` - **created** this folder, and **created** `camera.py`, and **add** video demo in it!
+
+### 6-28
+
+And default set webcamera src is `src=rstp://admin:1jiao426@192.168.1.3/h264/main/ch1/av_stream` for test!
+
+* in `Video/camera.py` - **add** webcam(under test)

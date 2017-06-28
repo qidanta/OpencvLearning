@@ -32,9 +32,9 @@ def draw_rect(event, x, y, flags, params):
 
 # matplotlib - mouse
 class Annotate(object):
-    def __init__(self, path):
+    def __init__(self, frame):
         self.ax = plt.gca()
-        self.img = cv2.imread(path)
+        self.img = frame
         self.rect = Rectangle((0,0), 1, 1, edgecolor='red')
         self.x0 = None
         self.y0 = None
@@ -53,18 +53,17 @@ class Annotate(object):
         self.x0 = event.xdata if event.xdata else 0
         self.y0 = event.ydata if event.ydata else 0
         self.press = True
-        print self.range
 
     def on_release(self, event):
         self.x1 = event.xdata if event.xdata else 0
         self.y1 = event.ydata if event.ydata else 0
         self.press = False
-        self.rect.set_width(self.x1 - self.x0)
-        self.rect.set_height(self.y1 - self.y0)
-        self.rect.set_xy((self.x0, self.y0))
+        # self.rect.set_width(self.x1 - self.x0)
+        # self.rect.set_height(self.y1 - self.y0)
+        # self.rect.set_xy((self.x0, self.y0))
         self.rect_coor.append((self.x0, self.y0, self.x1, self.y1))
-        print self.rect_coor
-        self.ax.figure.canvas.draw()
+        self.draw_rect(self.rect_coor)
+        print(self.rect_coor)
     
     def on_motion(self, event):
         if self.press == True:
@@ -78,11 +77,13 @@ class Annotate(object):
             self.rect.set_xy((self.x0, self.y0))
             self.ax.figure.canvas.draw()
 
-        def draw_rect(self, coor_arrs):
+    def draw_rect(self, coor_arrs):
             '''draw rect, and rect's arr from coor_arrs
             '''
             for coor in coor_arrs:
-                self.rect.set_width(coor[2] - coor[0])
-                self.rect.set_height(coor[3] - coor[1])
-                self.rect.set_xy((coor[0], coor[1]))
+                rect = Rectangle((0,0), 1, 1, edgecolor='red', fill=False)
+                self.ax.add_patch(rect)
+                rect.set_width(coor[2] - coor[0])
+                rect.set_height(coor[3] - coor[1])
+                rect.set_xy((coor[0], coor[1]))
                 self.ax.figure.canvas.draw()
