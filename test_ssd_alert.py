@@ -1,6 +1,6 @@
 from mouse.mouse import Annotate
 from Video.camera import local_camera
-from util.prefix import prefix_polygon
+from util.prefix import prefix_polygon, prefix_coor_double
 from fs.fs import array_to_txt
 import matplotlib.pyplot as plt
 import cv2
@@ -20,7 +20,7 @@ while(True):
 cap.release()
 cv2.destroyAllWindows()
 if not plt.show():
-    polygons  = prefix_polygon(a.rect_coor)
+    polygons  = prefix_coor_double(a.rect_coor)
     print (polygons)
     #array_to_txt(polygons, 'rect_data/compile-jpg.txt'.format(caffe_root))
     array_to_txt(polygons, 'polygons.txt')

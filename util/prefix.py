@@ -18,4 +18,20 @@ def prefix_polygon(coors):
         polygons.append(polygon)
     
     return polygons
-        
+
+def prefix_coor_double(coors):
+    '''convert [(lrx, lty, btx, bty)] to ltx lty,btx bty as string
+
+    - Params:
+    @coors: [(ltx, lty, btx, bty)]
+
+    - Returns:
+    a list contain 'ltx lty,btx bty'
+    '''
+    polygons = []
+    for coor in coors:
+        lt = '{} {}'.format(round(coor[0]), round(coor[1]))
+        rb = '{} {}'.format(round(coor[2]), round(coor[3]))
+        polygon = '{},{}'.format(lt, rb)
+        polygons.append(polygon)
+    return polygons
