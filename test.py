@@ -5,7 +5,7 @@ import cv2
 class Annotate(object):
     def __init__(self):
         self.ax = plt.gca()
-        self.img = cv2.imread('./img/ip7_3_angle_doublea4.jpg')
+        self.img = cv2.imread('./img/11.jpg')
         self.rect = Rectangle((0,0), 1, 1, edgecolor='red')
         self.x0 = None
         self.y0 = None

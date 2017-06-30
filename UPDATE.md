@@ -10,6 +10,7 @@
     - [Video](#video)
         - [6-27](#6-27)
         - [6-28](#6-28)
+        - [6-30](#6-30)
 
 <!-- /TOC -->
 
@@ -39,3 +40,7 @@
 And default set webcamera src is `src=rstp://admin:1jiao426@192.168.1.3/h264/main/ch1/av_stream` for test!
 
 * in `Video/camera.py` - **add** webcam(under test)
+
+### 6-30
+
+* in `util/log.py` - **created** this file, format print out's format

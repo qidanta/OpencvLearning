@@ -5,7 +5,7 @@ import numpy
 
 def listEvent():
     events = [i for i in dir(cv2) if 'EVENT' in i]
-    print events
+    print (events)
 
 # opencv
 def draw_rect(event, x, y, flags, params):

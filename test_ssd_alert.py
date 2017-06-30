@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import cv2
 
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('rtsp://admin:1jiao426@192.168.1.3/h264/main/ch1/av_stream')
 while(True):
         # Capture frame-by-frame
         ret, frame = cap.read()
