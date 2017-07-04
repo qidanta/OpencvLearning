@@ -10,7 +10,6 @@
 * print
 * str
 
-
 ## Mouse
 
 ### mouse.py
@@ -27,7 +26,7 @@
 
 ### commad
 
-* cut a video - `ffmpeg -i ./box.mp4 -vcodec copy -ss 00:00:05 -to 00:00:12 ./result.mp4`
+* cut a video - `ffmpeg -i ./car.mp4 -ss 00:00:03 -to 00:00:17 ./result.mp4` is better than any software!!
 
 ## util
 
@@ -37,5 +36,15 @@
 ### log.py
 
 * def `info` - by  `termcolor`
+
+## fs
+
+### fs.py
+
+* def `array_to_txt` - in `python3`
+
+## How to use it?
+
+file which has `test` prefix, is **main entry file**!
 
 
