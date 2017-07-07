@@ -5,12 +5,13 @@
 
 - [UPDATE](#update)
     - [SETTING](#setting)
-    - [Mouse](#mouse)
+    - [June](#june)
         - [6-24](#6-24)
-    - [Video](#video)
         - [6-27](#6-27)
         - [6-28](#6-28)
         - [6-30](#6-30)
+    - [July](#july)
+        - [7-06](#7-06)
 
 <!-- /TOC -->
 
@@ -22,14 +23,12 @@
 * **move**: move files/funcs from path1 to path2
 * **fixed**: fix bugs
 
-## Mouse
+## June
 
 ### 6-24
 
 * in `mouse.py` - **created** this folder, and create `mouse.py` file
 * in `mouse.py` - **add** class `Annotate` and def `draw_rect`
-
-## Video
 
 ### 6-27
 
@@ -44,3 +43,14 @@ And default set webcamera src is `src=rstp://admin:1jiao426@192.168.1.3/h264/mai
 ### 6-30
 
 * in `util/log.py` - **created** this file, format print out's format
+* in `fs/fs.py` - **created** this file and folder, and **add** `array_to_txt`
+
+## July
+
+* in `util/log.py` - **add** def `info`
+* in `util/prefix.py` - **add** def `prefix_polygon`and `prefix_coor_double`
+
+### 7-06
+
+* in `fs/folders.py` - **created** this file, and **traversal**
+* in `mouse` - **changed** class `Annotate`

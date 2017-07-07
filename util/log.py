@@ -10,3 +10,4 @@ def info(type, value):
     '''
     type = colored(type, 'white', attrs=['bold'])
     print ('[ INFO ] {} is: \n {}'.format(type, value))
+    print ("=="*6)

@@ -10,6 +10,9 @@
 * print
 * str
 
+## tips
+
+* `from __future__ import absolute_import` - solve `attempted relative import beyond top-level package`
 
 ## Mouse
 
@@ -27,7 +30,7 @@
 
 ### commad
 
-* cut a video - `ffmpeg -i ./box.mp4 -vcodec copy -ss 00:00:05 -to 00:00:12 ./result.mp4`
+* cut a video - `ffmpeg -i ./car.mp4 -ss 00:00:03 -to 00:00:17 ./result.mp4` is better than any software!!
 
 ## util
 
@@ -37,5 +40,32 @@
 ### log.py
 
 * def `info` - by  `termcolor`
+
+## fs
+
+### fs.py
+
+* def `array_to_txt` - in `python3`
+
+### folders.py
+
+* def `traversal` - in `os`
+
+## exe
+
+contain some applications by using modules above!
+
+### Annote
+
+* [ ] - set `self.ax.patches[index]` visible false by `[1-9]`
+* [ ] - get previes coors from json
+* [ ] - remove `[index]` coor in `self.rect_coor`
+* [ ] - append **new** coor into `self.rect_coor`by press `key s`
+* [ ] - save `self.rect_coor` into data by by press `key s or d`
+* [ ] - preview rect of some imgs, and label rect by index
+
+## How to use it?
+
+file which has `test` prefix, is **main entry file**!
 
 
