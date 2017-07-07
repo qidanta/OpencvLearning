@@ -10,6 +10,10 @@
 * print
 * str
 
+## tips
+
+* `from __future__ import absolute_import` - solve `attempted relative import beyond top-level package`
+
 ## Mouse
 
 ### mouse.py
@@ -42,6 +46,14 @@
 ### fs.py
 
 * def `array_to_txt` - in `python3`
+
+### folders.py
+
+* def `traversal` - in `os`
+
+## exe
+
+contain some applications by using modules above!
 
 ## How to use it?
 

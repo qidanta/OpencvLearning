@@ -11,6 +11,7 @@
         - [6-28](#6-28)
         - [6-30](#6-30)
     - [July](#july)
+        - [7-06](#7-06)
 
 <!-- /TOC -->
 
@@ -48,3 +49,8 @@ And default set webcamera src is `src=rstp://admin:1jiao426@192.168.1.3/h264/mai
 
 * in `util/log.py` - **add** def `info`
 * in `util/prefix.py` - **add** def `prefix_polygon`and `prefix_coor_double`
+
+### 7-06
+
+* in `fs/folders.py` - **created** this file, and **traversal**
+* in `mouse` - **changed** class `Annotate`
