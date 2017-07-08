@@ -6,6 +6,10 @@ import os
 from mouse.mouse import Annotate
 from fs.folders import traversal
 from util.log import info
+<<<<<<< HEAD
+=======
+from matplotlib.patches import Rectangle
+>>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb
 
 class Note(Annotate):
     def __init__(self, opt):
@@ -24,6 +28,7 @@ class Note(Annotate):
         filepath = self.img_files[self.index]
         self.img = Image.open(filepath)
         basename = os.path.basename(filepath)
+<<<<<<< HEAD
         if event.key.upper() == 'D':
             self.index += 1
 
@@ -41,3 +46,32 @@ class Note(Annotate):
         self.redraw_bg()
             
         
+=======
+        if event.key.upper() == 'D' or event.key.upper() == 'A':
+            if event.key.upper() == 'D':
+                self.index += 1
+
+            if  event.key.upper() == 'A':
+                self.index -= 1  
+            
+            self.index = len(self.img_files) - 1 if self.index >= len(self.img_files) else self.index
+            self.index = 0 if self.index <0 else self.index
+            self.note_data[basename] = self.rect_coor
+            info(basename, self.note_data)
+            self.set_bg(self.img)
+            self.redraw_bg()
+
+        if event.key.upper() == 'W':
+            # self.ax.patches[len(self.ax.patches) - 1].set_visible(False)
+            # self.ax.patches[0].set_visible(False)
+            if len(self.ax.patches) > 1:
+                self.ax.patches[len(self.ax.patches) - 1].remove()
+                self.ax.patches[0].set_visible(False)
+                del self.rect_coor[len(self.ax.patches) - 1]
+            else:
+                self.ax.patches[0].set_visible(False)
+            info('rect', self.ax.patches)
+            info('coors', self.rect_coor)
+            info('self.rect', self.rect)
+            self.ax.figure.canvas.draw()
+>>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb
