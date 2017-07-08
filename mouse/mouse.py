@@ -64,11 +64,10 @@ class Annotate(object):
         self.x1 = event.xdata if event.xdata else 0
         self.y1 = event.ydata if event.ydata else 0
         self.press = False
-        self.rect_coor.append((self.x0, self.y0, self.x1, self.y1))
-        self.draw_rect(self.rect_coor)
-        self.current_rect = (self.x0, self.y0, self.x1, self.y1)
-        self.rect_coor.append(self.current_rect)
-        self.draw_rect(self.current_rect)
+        if self.x0 !=0 and self.y0 !=0 and self.x1 !=0 and self.y1 != 0:
+            self.current_rect = (self.x0, self.y0, self.x1, self.y1)
+            self.rect_coor.append(self.current_rect)
+            self.draw_rect(self.current_rect)
         info('rect_coor', self.rect_coor)
     
     def on_motion(self, event):

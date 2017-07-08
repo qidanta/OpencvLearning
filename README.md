@@ -60,7 +60,6 @@ contain some applications by using modules above!
 * [ ] - set `self.ax.patches[index]` visible false by `[1-9]`
 * [ ] - get previes coors from json
 * [ ] - remove `[index]` coor in `self.rect_coor`
-* [ ] - append **new** coor into `self.rect_coor`by press `key s`
 * [ ] - save `self.rect_coor` into data by by press `key s or d`
 * [ ] - preview rect of some imgs, and label rect by index
 
