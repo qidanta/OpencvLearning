@@ -64,14 +64,11 @@ class Annotate(object):
         self.x1 = event.xdata if event.xdata else 0
         self.y1 = event.ydata if event.ydata else 0
         self.press = False
-<<<<<<< HEAD
         self.rect_coor.append((self.x0, self.y0, self.x1, self.y1))
         self.draw_rect(self.rect_coor)
-=======
         self.current_rect = (self.x0, self.y0, self.x1, self.y1)
         self.rect_coor.append(self.current_rect)
         self.draw_rect(self.current_rect)
->>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb
         info('rect_coor', self.rect_coor)
     
     def on_motion(self, event):
@@ -92,11 +89,7 @@ class Annotate(object):
         self.set_bg(self.img)
         self.redraw_bg()
         
-<<<<<<< HEAD
-    def draw_rect(self, coor_arrs):
-=======
     def draw_rects(self, coor_arrs):
->>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb
             '''draw rect, and rect's arr from coor_arrs
             '''
             for index, coor in enumerate(coor_arrs):
@@ -106,8 +99,6 @@ class Annotate(object):
                 rect.set_height(coor[3] - coor[1])
                 rect.set_xy((coor[0], coor[1]))
             self.ax.figure.canvas.draw()
-<<<<<<< HEAD
-=======
     
     def draw_rect(self, coor):
         rect = Rectangle((0,0), 1, 1, edgecolor='red', fill=False)
@@ -118,7 +109,6 @@ class Annotate(object):
         # self.ax.annotate(1, (coor[0], coor[1]), color='w', weight='bold', 
         #         fontsize=16, horizontalalignment='left', verticalalignment='top')
         self.ax.figure.canvas.draw()
->>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb
 
     def set_bg(self, frame):
         self.rect_coor = []

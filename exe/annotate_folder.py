@@ -6,10 +6,7 @@ import os
 from mouse.mouse import Annotate
 from fs.folders import traversal
 from util.log import info
-<<<<<<< HEAD
-=======
 from matplotlib.patches import Rectangle
->>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb
 
 class Note(Annotate):
     def __init__(self, opt):
@@ -28,7 +25,6 @@ class Note(Annotate):
         filepath = self.img_files[self.index]
         self.img = Image.open(filepath)
         basename = os.path.basename(filepath)
-<<<<<<< HEAD
         if event.key.upper() == 'D':
             self.index += 1
 
@@ -46,7 +42,6 @@ class Note(Annotate):
         self.redraw_bg()
             
         
-=======
         if event.key.upper() == 'D' or event.key.upper() == 'A':
             if event.key.upper() == 'D':
                 self.index += 1
@@ -74,4 +69,3 @@ class Note(Annotate):
             info('coors', self.rect_coor)
             info('self.rect', self.rect)
             self.ax.figure.canvas.draw()
->>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb

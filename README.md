@@ -55,8 +55,6 @@
 
 contain some applications by using modules above!
 
-<<<<<<< HEAD
-=======
 ### Annote
 
 * [ ] - set `self.ax.patches[index]` visible false by `[1-9]`
@@ -66,7 +64,6 @@ contain some applications by using modules above!
 * [ ] - save `self.rect_coor` into data by by press `key s or d`
 * [ ] - preview rect of some imgs, and label rect by index
 
->>>>>>> 9718f34fa3e9451f2843ffe69764760ca8f392eb
 ## How to use it?
 
 file which has `test` prefix, is **main entry file**!
