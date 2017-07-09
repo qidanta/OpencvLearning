@@ -68,7 +68,6 @@ class Annotate(object):
             self.current_rect = (self.x0, self.y0, self.x1, self.y1)
             self.rect_coor.append(self.current_rect)
             self.draw_rect(self.current_rect)
-        info('rect_coor', self.rect_coor)
     
     def on_motion(self, event):
         if self.press == True:
@@ -86,7 +85,7 @@ class Annotate(object):
         print (event.key)
         self.img = cv2.imread("/home/eric/Desktop/Project-PY/pro-py27/04OpencvLearning/img/11.jpg")
         self.set_bg(self.img)
-        self.redraw_bg()
+        self.redraw_bg(self.img)
         
     def draw_rects(self, coor_arrs):
             '''draw rect, and rect's arr from coor_arrs
@@ -111,9 +110,10 @@ class Annotate(object):
 
     def set_bg(self, frame):
         self.rect_coor = []
-        for rect in self.ax.patches:
-            rect.set_visible(False)
+        self.ax.patches[0].set_visible(False)
+        for rect in self.ax.patches[1:]:
+            rect.remove()
 
-    def redraw_bg(self):
-        self.ax.imshow(self.img)
+    def redraw_bg(self, frame):
+        self.ax.imshow(frame)
         self.ax.figure.canvas.draw()
