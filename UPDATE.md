@@ -12,6 +12,7 @@
         - [6-30](#6-30)
     - [July](#july)
         - [7-06](#7-06)
+        - [7-10](#7-10)
 
 <!-- /TOC -->
 
@@ -54,3 +55,7 @@ And default set webcamera src is `src=rstp://admin:1jiao426@192.168.1.3/h264/mai
 
 * in `fs/folders.py` - **created** this file, and **traversal**
 * in `mouse` - **changed** class `Annotate`
+
+### 7-10
+
+* in `fs/fs.py` - **add** func `nps_to_npz`, convert dict(contain np.array) in `.npz` file

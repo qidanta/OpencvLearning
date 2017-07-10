@@ -46,6 +46,7 @@
 ### fs.py
 
 * def `array_to_txt` - in `python3`
+* def `nps_to_npz` - in `numpy`
 
 ### folders.py
 
