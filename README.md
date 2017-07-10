@@ -13,6 +13,7 @@
 ## tips
 
 * `from __future__ import absolute_import` - solve `attempted relative import beyond top-level package`
+* `**kwag` - `kwag` is a dict, in function parameters
 
 ## Mouse
 
@@ -67,5 +68,3 @@ contain some applications by using modules above!
 ## How to use it?
 
 file which has `test` prefix, is **main entry file**!
-
-
