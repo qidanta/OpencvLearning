@@ -58,10 +58,10 @@ contain some applications by using modules above!
 ### Annote
 
 * [ ] - set `self.ax.patches[index]` visible false by `[1-9]`
-* [ ] - get previes coors from json
 * [ ] - remove `[index]` coor in `self.rect_coor`
-* [ ] - save `self.rect_coor` into data by by press `key s or d`
-* [ ] - preview rect of some imgs, and label rect by index
+* [x] - save `self.rect_coor` into data by by press `key s or d`
+* [ ] - convert json to txt in special formation
+* [ ] - add some glog/remove info
 
 ## How to use it?
 
