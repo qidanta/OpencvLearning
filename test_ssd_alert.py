@@ -4,6 +4,7 @@ from util.prefix import prefix_polygon, prefix_coor_double
 from fs.fs import array_to_txt
 import matplotlib.pyplot as plt
 import cv2
+from PIL import Image
 
 
 # cap = cv2.VideoCapture('rtsp://admin:1jiao426@192.168.1.3/h264/main/ch1/av_stream')
@@ -26,8 +27,7 @@ import cv2
 #     array_to_txt(polygons, 'polygons.txt')
 
 #===== another =====#
-img1 = cv2.imread("/home/eric/Desktop/Project-PY/pro-py27/04OpencvLearning/img/0.png")
-img2 = cv2.imread("/home/eric/Desktop/Project-PY/pro-py27/04OpencvLearning/img/11.jpg")
+img1 = Image.open("/home/eric/Desktop/Project-PY/pro-py27/03camera2distance/distance-to-camera/distance-to-camera/depth.jpg")
 a = Annotate(img1)
 plt.show()
     
