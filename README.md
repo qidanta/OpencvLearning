@@ -59,12 +59,19 @@ contain some applications by using modules above!
 
 ### Annote
 
+#### TODO
+
 * [ ] - set `self.ax.patches[index]` visible false by `[1-9]`
 * [ ] - remove `[index]` coor in `self.rect_coor`
 * [x] - save `self.rect_coor` into data by by press `key s or d`
 * [ ] - convert json to txt in special formation
 * [ ] - add some glog/remove info
 
+#### How to use it?
+
+It works undert `python3`, and `just python train_annotate_folder.py`! And, you nend type your imgs-folder-path in `parser --folderpath`
+
 ## How to use it?
 
-file which has `test` prefix, is **main entry file**!
+* file which has `test` prefix, is **main debug entry file**!
+* file which has `train` prefix, is **main entry file which has complete funcs**
