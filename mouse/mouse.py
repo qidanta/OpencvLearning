@@ -38,6 +38,7 @@ class Annotate(object):
     def __init__(self, frame):
         self.img = frame
         self.rect = Rectangle((0,0), 1, 1, edgecolor='red', fill=False)
+        self.anns = []
         self.x0 = None
         self.y0 = None
         self.x1 = None
@@ -96,6 +97,8 @@ class Annotate(object):
                 rect.set_width(coor[2] - coor[0])
                 rect.set_height(coor[3] - coor[1])
                 rect.set_xy((coor[0], coor[1]))
+                ann = self.ax.annotate(index, (coor[0], coor[1]), color='w', weight='bold', fontsize=16, horizontalalignment='left', verticalalignment='top')
+                self.anns.append(ann)
             self.ax.figure.canvas.draw()
     
     def draw_rect(self, coor):
@@ -113,6 +116,10 @@ class Annotate(object):
         self.ax.patches[0].set_visible(False)
         for rect in self.ax.patches[1:]:
             rect.remove()
+        if self.anns:
+            for ann in self.anns:
+                ann.remove()
+            self.anns = []
 
     def redraw_bg(self, frame):
         self.ax.imshow(frame)

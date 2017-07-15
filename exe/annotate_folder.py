@@ -67,8 +67,8 @@ class Note(Annotate):
             self.index = 0 if self.index <0 else self.index
             if self.index != 0:
                 self.note_data[self.basename] = self.rect_coor
-            filepath = self.img_files[self.index]
-            img = Image.open(filepath)
+            self.current_filepath = self.img_files[self.index]
+            img = Image.open(self.current_filepath)
             self.set_bg(img)
             self.redraw_bg(img)
 
@@ -85,7 +85,8 @@ class Note(Annotate):
 
         if event.key.upper() == 'X':
             log.info("saving {} data into {}".format(self.basename, self.opt.jsonpath))
-            if self.index != 0:
+            if self.index >= 0:
+                self.note_data[os.path.basename(self.current_filepath)] = self.rect_coor
                 with open(self.opt.jsonpath, 'w') as f:
                     json.dump(self.note_data, f)
 
@@ -123,3 +124,13 @@ class Note(Annotate):
             log.info("auto saving data into {}".format(self.opt.jsonpath))
             with open(self.opt.jsonpath, 'w') as f:
                     json.dump(self.note_data, f)
+    
+    def redraw_bg(self, frame):
+        self.ax.imshow(frame)
+        if self.opt.mode == 'preview':
+            with open(self.opt.jsonpath, 'r') as f:
+                self.json_data = json.load(f)
+            basename = os.path.basename(self.current_filepath)
+            rects = self.json_data[basename]
+            self.draw_rects(rects)
+        self.ax.figure.canvas.draw()

@@ -32,7 +32,6 @@ def web_camera(src):
     while True:
         # grab next frame
         frame = stream.read()
-        print (frame)
         key = cv2.waitKey(1) & 0xFF
 
         # keybindings for display
@@ -50,3 +49,7 @@ def web_camera(src):
 if __name__ == '__main__':
     #local_camera(0)
     web_camera(src='rstp://admin:1jiao426@192.168.1.3/h264/main/ch1/av_stream')
+
+1. 读取视频不做任何处理（输入到caffe之前），本身就有延迟（8s）
+2. caffe调用和第一步读取之间有没有延迟没有测试
+3. caffe调用摄像头，以及caffe处理图片然后输出，差值0.8s，一张图片处理时间为0.8s
