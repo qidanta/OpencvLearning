@@ -97,7 +97,7 @@ class Annotate(object):
                 rect.set_width(coor[2] - coor[0])
                 rect.set_height(coor[3] - coor[1])
                 rect.set_xy((coor[0], coor[1]))
-                ann = self.ax.annotate(index, (coor[0], coor[1]), color='w', weight='bold', fontsize=16, horizontalalignment='left', verticalalignment='top')
+                ann = self.ax.annotate((index, int(coor[0]), int(coor[1]), int(coor[2]), int(coor[3])), (coor[0], coor[1]), color='w', fontsize=10, horizontalalignment='left', verticalalignment='top')
                 self.anns.append(ann)
             self.ax.figure.canvas.draw()
     
