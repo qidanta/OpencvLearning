@@ -13,7 +13,19 @@ def traversal(path):
     file_list = [path + '/' + filename for filename in file_list]
     return file_list
 
-def traversal_dir_tree(path):
-    basename = os.path.basename(path)
-    result = []
-    dirs = ['{}/{}'.format(path, dir) for dir in os.listdir(path) if os.path.isdir('{}/{}'.format(path, dir))]
+def traversal_dirs_tree(path):
+    '''get all dirs under one folders
+
+    - Params:
+    @path: get dirs under the `path`
+
+    - Return:
+    a dict of dirs
+    '''
+    root, dirs, files = list(os.walk(path))[0]
+    result = {}
+    if dirs:
+        for dir in dirs:
+            path = '{}/{}'.format(root, dir)
+            result[path] = traversal_dirs_tree(path)
+    return result if result else None
