@@ -42,16 +42,28 @@
 
 * def `info` - by  `termcolor`
 
+### compare.py
+
+* def `some` and `each` - in `python3`
+
 ## fs
 
 ### fs.py
 
 * def `array_to_txt` - in `python3`
 * def `nps_to_npz` - in `numpy`
+* def `str_to_md`- in `python3` 
 
 ### folders.py
 
 * def `traversal` - in `os`
+* def `traversal_dirs_tree` - in `os`
+
+### md.py
+
+some `def` about `markdown files`
+
+* def `md_meau`/`dirstree_to_mdul`/`ul_head`/`al_head`/`h1_head`/`md_quote`/`a_relpath` - in `python3`
 
 ## exe
 

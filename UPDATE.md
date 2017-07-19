@@ -13,6 +13,7 @@
     - [July](#july)
         - [7-06](#7-06)
         - [7-10](#7-10)
+        - [7-18/1-19](#7-181-19)
 
 <!-- /TOC -->
 
@@ -59,3 +60,10 @@ And default set webcamera src is `src=rstp://admin:1jiao426@192.168.1.3/h264/mai
 ### 7-10
 
 * in `fs/fs.py` - **add** func `nps_to_npz`, convert dict(contain np.array) in `.npz` file
+
+### 7-18/1-19
+
+* in `fs/md.py` - **created** this file, and **add** some defs about markdown files
+* in `fs/folders.py` - **add** def `traversal_dirs_tree`
+* in `fs/fs.py`- **add** def `str_to_md`
+* in `util/compare.py` - **add** def `some` and `each`, do some jobs like `any` and `all` 

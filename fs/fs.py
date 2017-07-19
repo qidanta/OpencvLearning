@@ -21,3 +21,13 @@ def nps_to_npz(dicts, path):
     '''
     keys_list = list(dict.keys())
     np.save("path", **dict)
+
+def str_to_md(str, filepath='./'):
+    '''write str into markdown file, default filenames is `md.md`
+
+    - Params:
+    @str: markdown file content
+    @filepath: the path of markdown file
+    '''
+    with open('{}md.md'.format(filepath), 'wt') as f:
+        f.write(str)
