@@ -9,6 +9,7 @@
 * file I/O
 * print
 * str
+* ml - machine learning
 
 ## tips
 
@@ -64,6 +65,12 @@
 some `def` about `markdown files`
 
 * def `md_meau`/`dirstree_to_mdul`/`ul_head`/`al_head`/`h1_head`/`md_quote`/`a_relpath` - in `python3`
+
+## ml
+
+### road.py
+
+* def `Dijkstra` - in `python3`
 
 ## exe
 
