@@ -73,11 +73,9 @@ contain some applications by using modules above!
 
 #### TODO
 
-* [ ] - set `self.ax.patches[index]` visible false by `[1-9]`
-* [ ] - remove `[index]` coor in `self.rect_coor`
+* [x] - add `preview mode` to preview the rects you draw
 * [x] - save `self.rect_coor` into data by by press `key s or d`
 * [ ] - convert json to txt in special formation
-* [ ] - add some glog/remove info
 
 #### How to use it?
 
