@@ -4,16 +4,17 @@
 <!-- TOC -->
 
 - [UPDATE](#update)
-    - [SETTING](#setting)
-    - [June](#june)
-        - [6-24](#6-24)
-        - [6-27](#6-27)
-        - [6-28](#6-28)
-        - [6-30](#6-30)
-    - [July](#july)
-        - [7-06](#7-06)
-        - [7-10](#7-10)
-        - [7-18/1-19](#7-181-19)
+  - [SETTING](#setting)
+  - [June](#june)
+    - [6-24](#6-24)
+    - [6-27](#6-27)
+    - [6-28](#6-28)
+    - [6-30](#6-30)
+  - [July](#july)
+    - [7-06](#7-06)
+    - [7-10](#7-10)
+    - [7-18/1-19](#7-181-19)
+    - [7-20](#7-20)
 
 <!-- /TOC -->
 
@@ -69,3 +70,7 @@ And default set webcamera src is `src=rstp://admin:1jiao426@192.168.1.3/h264/mai
 * in `util/compare.py` - **add** def `some` and `each`, do some jobs like `any` and `all` 
 * in `ml/road.py` - **create** this folder and file, **add** def `Dijkstra`
 * in `util/prefix.py` - **add** def `create_rect_grah` 
+
+### 7-20
+
+* packages `glog` - rewrite `glog.py`, now we can log info into `*.log`. and the rewrited file stored in `README/glog.py`

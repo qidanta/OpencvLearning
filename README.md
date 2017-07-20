@@ -42,6 +42,7 @@
 ### log.py
 
 * def `info` - by  `termcolor`
+* rewrite packages glog's `glog.py`
 
 ### compare.py
 
