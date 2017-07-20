@@ -72,6 +72,16 @@ some `def` about `markdown files`
 
 * def `Dijkstra` - in `python3`
 
+## jupyter-notebook
+
+write tutorials about exe of some funcs in `jupyter-note` type, and store these in this folder!
+
+### Use Jupyter in vscode
+
+* install extentions `python` and `jupyter`
+* `pip install jupyter` in `python3`
+* just `jupyter notebook` in any folder, or goto some `.py` files, then click `run cell`
+
 ## exe
 
 contain some applications by using modules above!

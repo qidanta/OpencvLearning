@@ -1,3 +1,4 @@
+#%%
 from exe.annotate_folder import Note
 import matplotlib.pyplot as plt
 import argparse
